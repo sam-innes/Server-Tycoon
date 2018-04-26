@@ -28,6 +28,7 @@ public class PythonSyntaxChecker : MonoBehaviour {
     }
 
     public GameObject errorPanel;
+    public GameObject codeCorrectPanel;
 
     private ScriptEngine engine = Python.CreateEngine();
 
@@ -47,6 +48,8 @@ public class PythonSyntaxChecker : MonoBehaviour {
 
         if (errors.Count > 0)
             errorPanel.SetActive(true);
+        else
+            codeCorrectPanel.SetActive(true);
     }
 
     // Use this for initialization
