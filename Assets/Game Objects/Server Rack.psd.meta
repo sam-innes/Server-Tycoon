@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: adf3fb70f9634fd449c856d38f26f10a
-timeCreated: 1523471959
+guid: 8d531c39db36f724d8b5a19d01ddab74
+timeCreated: 1524824376
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Server Rack_0
-    21300002: Server Rack_1
+    21300000: Broken Server
+    21300002: Fixed Server
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -93,36 +93,36 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Server Rack_0
+      name: Broken Server
       rect:
         serializedVersion: 2
-        x: 18
-        y: 223
+        x: 7
+        y: 165
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Server Rack_1
+      name: Fixed Server
       rect:
         serializedVersion: 2
-        x: 202
-        y: 222
+        x: 90
+        y: 164
         width: 64
-        height: 64
+        height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     outline: []
     physicsShape: []
-  spritePackingTag: 
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  spritePackingTag:
+  userData:
+  assetBundleName:
+  assetBundleVariant:
