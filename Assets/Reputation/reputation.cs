@@ -10,7 +10,7 @@ public class reputation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		rep = 60;
+		rep = 500;
 
 		//InvokeRepeating("setRandom", 0.1f, 0.5f); //This is for testing purposes only
 	}
