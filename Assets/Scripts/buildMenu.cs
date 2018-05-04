@@ -12,18 +12,19 @@ public class buildMenu : MonoBehaviour {
 	public bool trigger;
 
 	void Start(){
-		trigger = false;
+		trigger = true;
 		open.SetActive(true);
 		menu.SetActive(false);
 	}
 
 	public void toggleMenu(){
+
+		trigger = !trigger;
+
 		open.SetActive(trigger);
 		menu.SetActive(!trigger);
 
 		setActive();
-
-		trigger = !trigger;
 	}
 
 	public void setActive(){
