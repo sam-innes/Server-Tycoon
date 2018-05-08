@@ -15,7 +15,7 @@ public class ServerPlacement : MonoBehaviour {
     public ServerTile brokenServerTile;
 
     private bool activePlacement;
-    
+
     class TileMeta
     {
         public Vector3Int pos;
@@ -59,22 +59,22 @@ public class ServerPlacement : MonoBehaviour {
 
     public void OnMouseOver()
     {
+      if(activePlacement){
         var v3 = Input.mousePosition;
         v3 = Camera.main.ScreenToWorldPoint(v3);
 
         var nearest = serverPlacementMap.WorldToCell(v3);
         var temp = new TileMeta(nearest, serverPlacementMap.GetTile(nearest));
-        if (last == null)
-        {
+        if (last == null){
             last = temp;
             serverPlacementMap.SetTile(nearest, hoverServerTile);
         } else if (!last.Equals(temp)) {
             if (!last.IsServerTile())
                 serverPlacementMap.SetTile(last.pos, last.tile);
-
             serverPlacementMap.SetTile(nearest, hoverServerTile);
             last = temp;
         }
+      }
     }
 
     public void OnMouseDown()
@@ -94,10 +94,16 @@ public class ServerPlacement : MonoBehaviour {
     public void SetActivePlacement(bool active)
     {
         activePlacement = active;
+        if (!activePlacement)
+            serverPlacementMap.SetTile(last.pos, null);
     }
 
     // Update is called once per frame
     void Update () {
-        
+
+    }
+
+    public void showBlock(bool active){
+      SetActivePlacement(false);
     }
 }
