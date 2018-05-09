@@ -273,7 +273,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109966461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.88, y: 0.31, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -475,7 +475,7 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a40d13d1b77fc5c4f9f6b267e3b0f5c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1466,8 +1466,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 2, y: 1, z: 0}
     second:
-      m_TileIndex: 10
-      m_TileSpriteIndex: 1
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -1960,7 +1960,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d69b14f6c194a7949a9c0976e6d9a0df, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 6227a6811768e7d4485eb6007a910c26, type: 2}
-  - m_RefCount: 111
+  - m_RefCount: 112
     m_Data: {fileID: 11400000, guid: 8f24ff35d3d5d6d43b62f18b3c4cf34c, type: 2}
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: 3f05783c95098144294f3b1fce1514bd, type: 2}
@@ -1972,18 +1972,18 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 28909a9973721fe4298471b01e658ea3, type: 2}
   - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: b6e73c5f5e41aea4e96a369d8f7bdafa, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: d9acc83e998e93b4989af351c8580f1d, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 8d531c39db36f724d8b5a19d01ddab74, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300556, guid: f1610528afcceaa49bc0745e77cd30ec, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300558, guid: f1610528afcceaa49bc0745e77cd30ec, type: 3}
-  - m_RefCount: 111
+  - m_RefCount: 112
     m_Data: {fileID: 21300662, guid: f1610528afcceaa49bc0745e77cd30ec, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: 21300660, guid: f1610528afcceaa49bc0745e77cd30ec, type: 3}
@@ -2778,8 +2778,8 @@ GameObject:
   - component: {fileID: 499103439}
   - component: {fileID: 499103441}
   - component: {fileID: 499103440}
-  - component: {fileID: 499103442}
   - component: {fileID: 499103443}
+  - component: {fileID: 499103442}
   m_Layer: 0
   m_Name: ServerPlacementMap
   m_TagString: Untagged
@@ -2886,14 +2886,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 499103438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f36bf1c0dbfcca7469134e478a5f5af5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f5b8bb77dd146440a6fa104f4175116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverPlacementMap: {fileID: 499103441}
-  brokenServer: {fileID: 21300000, guid: 8d531c39db36f724d8b5a19d01ddab74, type: 3}
-  fixedServer: {fileID: 21300002, guid: 8d531c39db36f724d8b5a19d01ddab74, type: 3}
-  hoverServerTile: {fileID: 0}
-  brokenServerTile: {fileID: 0}
+  server: {fileID: 21300000, guid: 8d531c39db36f724d8b5a19d01ddab74, type: 3}
+  collisionMaps:
+  - {fileID: 1376962732}
+  - {fileID: 483543571}
+  serverPrefab: {fileID: 1928598205987714, guid: 8815bcf655b476b46a56bf909c963266,
+    type: 2}
 --- !u!65 &499103443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3088,7 +3089,7 @@ GameObject:
   - component: {fileID: 573606169}
   - component: {fileID: 573606168}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: RoomBoundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4863,7 +4864,7 @@ Prefab:
     - target: {fileID: 114231695669397434, guid: 5c223d3548c07fe42a4d9f326401c06c,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActivePlacement
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 114231695669397434, guid: 5c223d3548c07fe42a4d9f326401c06c,
         type: 2}
@@ -5513,7 +5514,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1605263185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 266927803}
