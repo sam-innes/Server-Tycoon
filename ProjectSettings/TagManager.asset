@@ -7,6 +7,7 @@ TagManager:
   - workstation
   - key
   - gate
+  - client
   layers:
   - Default
   - TransparentFX

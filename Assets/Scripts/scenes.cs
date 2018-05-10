@@ -37,4 +37,9 @@ public class scenes : MonoBehaviour {
 		GameObject.Find("manBlue_stand").GetComponent<playerController>().movementActivate();
 	}
 
+	public void loadClient(){
+		SceneManager.LoadScene("ClientSelect", LoadSceneMode.Additive);
+		GameObject.Find("manBlue_stand").GetComponent<playerController>().movementDisable();
+	}
+
 }

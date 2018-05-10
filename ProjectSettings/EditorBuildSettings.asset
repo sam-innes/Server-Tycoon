@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ServerSetup/Server Setup.unity
     guid: eac580ed9ece545b2ab785d8d9b3b059
+  - enabled: 1
+    path: Assets/Scenes/ClientSelect.unity
+    guid: 8d31cda79572346668e7b384d97ce096
   m_configObjects: {}
