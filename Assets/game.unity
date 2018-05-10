@@ -2357,7 +2357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &333432166
 MonoBehaviour:
@@ -2889,11 +2889,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f5b8bb77dd146440a6fa104f4175116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  server: {fileID: 21300000, guid: 8d531c39db36f724d8b5a19d01ddab74, type: 3}
-  collisionMaps:
-  - {fileID: 1376962732}
-  - {fileID: 483543571}
-  serverPrefab: {fileID: 1928598205987714, guid: 8815bcf655b476b46a56bf909c963266,
+  hoverServerPrefab: {fileID: 1928598205987714, guid: 8815bcf655b476b46a56bf909c963266,
+    type: 2}
+  serverPrefab: {fileID: 1263884409820882, guid: d95575919b1591748a78a8c194db4553,
     type: 2}
 --- !u!65 &499103443
 BoxCollider:
@@ -4024,7 +4022,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &666061834
 MonoBehaviour:
@@ -4525,6 +4523,48 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!1001 &998543212
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4765281093130430, guid: d95575919b1591748a78a8c194db4553, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.675209
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765281093130430, guid: d95575919b1591748a78a8c194db4553, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.527622
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765281093130430, guid: d95575919b1591748a78a8c194db4553, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765281093130430, guid: d95575919b1591748a78a8c194db4553, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765281093130430, guid: d95575919b1591748a78a8c194db4553, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765281093130430, guid: d95575919b1591748a78a8c194db4553, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765281093130430, guid: d95575919b1591748a78a8c194db4553, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765281093130430, guid: d95575919b1591748a78a8c194db4553, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d95575919b1591748a78a8c194db4553, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1017411202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5478,7 +5518,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605263185
 GameObject:
@@ -5523,7 +5563,7 @@ Transform:
   - {fileID: 499103439}
   - {fileID: 573606167}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642765585
 GameObject:
@@ -5749,7 +5789,7 @@ RectTransform:
   - {fileID: 1341100974}
   - {fileID: 915296717}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6144,6 +6184,22 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
+--- !u!1 &1928031659 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1263884409820882, guid: d95575919b1591748a78a8c194db4553,
+    type: 2}
+  m_PrefabInternal: {fileID: 998543212}
+--- !u!114 &1928031660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1928031659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d19d0cec9e2a64884b77d0f94cf9d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2111982612
 GameObject:
   m_ObjectHideFlags: 0

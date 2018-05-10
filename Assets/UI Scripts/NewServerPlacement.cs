@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class NewServerPlacement : MonoBehaviour {
-    private Object serverPrefab;
+    public Object hoverServerPrefab;
+    public Object serverPrefab;
     private GameObject hoverUI; 
 
     void Awake()
     {
-        serverPrefab = Resources.Load("Server Prefabs/ServerPrefab");
         CreateNew();
         SetActive(false);
     }
 
     public void CreateNew()
     {
-        hoverUI = (GameObject)Instantiate(serverPrefab);
+        hoverUI = (GameObject)Instantiate(hoverServerPrefab);
     }
 
     public void OnMouseOver()
@@ -32,16 +32,14 @@ public class NewServerPlacement : MonoBehaviour {
         if (hoverUI.activeSelf && hoverUI.GetComponent<ServerScript>().InValidPosition())
         {
             Place();
-            CreateNew();
             SetActive(false);
         }
     }
 
     public void Place()
     {
-        hoverUI.GetComponent<SpriteRenderer>().sortingOrder = 0;
-        Destroy(hoverUI.GetComponent<ServerScript>());
-        hoverUI.GetComponent<BoxCollider2D>().isTrigger = false;
+        GameObject newServer = (GameObject)Instantiate(serverPrefab);
+        newServer.transform.position = hoverUI.transform.position;
     }
 
     public void SetActive(bool state)
