@@ -42,4 +42,9 @@ public class scenes : MonoBehaviour {
 		GameObject.Find("manBlue_stand").GetComponent<playerController>().movementDisable();
 	}
 
+	public void removeClient(){
+		SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("ClientSelect"));
+		GameObject.Find("manBlue_stand").GetComponent<playerController>().movementActivate();
+	}
+
 }

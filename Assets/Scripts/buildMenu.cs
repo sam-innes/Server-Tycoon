@@ -28,6 +28,6 @@ public class buildMenu : MonoBehaviour {
 	}
 
 	public void setActive(){
-		serverPlacement.GetComponent<ServerPlacement>().showBlock(!trigger);
+		//serverPlacement.GetComponent<NewServerPlacement>().SetActive(!trigger);
 	}
 }

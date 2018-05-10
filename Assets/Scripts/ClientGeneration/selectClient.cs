@@ -4,15 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class selectClient : MonoBehaviour {
-	public GameObject self;
+	public Button self;
 
-	void OnMouseEnter(){
-		Debug.Log("Reached");
-		if(Input.GetMouseButtonDown(0)){
-       Debug.Log("test");
-    }
+	void Start(){
+		self.onClick.AddListener(GameObject.Find("Systems").GetComponent<scenes>().removeClient);
 	}
-
-
 
 }
