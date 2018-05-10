@@ -67,4 +67,8 @@ public class playerController : MonoBehaviour {
     public void movementActivate(){
       move = true;
     }
+
+    public void movementDisable(){
+      move = false;
+    }
 }

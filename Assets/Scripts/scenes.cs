@@ -11,11 +11,29 @@ public class scenes : MonoBehaviour {
 
 	public void loadEmail(){
 		SceneManager.LoadScene("EmailClient", LoadSceneMode.Additive);
+		GameObject.Find("manBlue_stand").GetComponent<playerController>().movementDisable();
 	}
 
 	public void returnMain(){
 		SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("EmailClient"));
-		Debug.Log("test");
+		GameObject.Find("manBlue_stand").GetComponent<playerController>().movementActivate();
+	}
+
+	public void loadServer(){
+		SceneManager.LoadScene("Server Setup", LoadSceneMode.Additive);
+		GameObject.Find("manBlue_stand").GetComponent<playerController>().movementDisable();
+	}
+
+	public void loadConfig(){
+		SceneManager.LoadScene("Configure", LoadSceneMode.Additive);
+	}
+
+	public void removeConfig(){
+		SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("Configure"));
+	}
+
+	public void removeServer(){
+		SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("Server Setup"));
 		GameObject.Find("manBlue_stand").GetComponent<playerController>().movementActivate();
 	}
 
