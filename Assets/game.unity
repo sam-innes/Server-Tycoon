@@ -6200,6 +6200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d19d0cec9e2a64884b77d0f94cf9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Prompt: {fileID: 2111982614}
 --- !u!1 &2111982612
 GameObject:
   m_ObjectHideFlags: 0
