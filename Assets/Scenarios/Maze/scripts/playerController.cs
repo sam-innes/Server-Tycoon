@@ -12,6 +12,7 @@ public class playerController : MonoBehaviour {
 
     public GameObject scripts;
     private bool move;
+    private int serverTriggers = 0;
 
     void Start()
     {
@@ -45,6 +46,12 @@ public class playerController : MonoBehaviour {
         {
             promptTxt.text = "Press 'e' to log on";
         }
+
+        if (collision.gameObject.CompareTag("server"))
+        {
+            serverTriggers++;
+            promptTxt.text = "Press 'e' to configure server";
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -52,6 +59,14 @@ public class playerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("workstation"))
         {
             promptTxt.text = "";
+        }
+
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.CompareTag("server"))
+        {
+            serverTriggers--;
+            if (serverTriggers == 0)
+                promptTxt.text = "";
         }
     }
 
@@ -66,5 +81,9 @@ public class playerController : MonoBehaviour {
 
     public void movementActivate(){
       move = true;
+    }
+
+    public void movementDisable(){
+      move = false;
     }
 }

@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenarios/Maze/maze.unity
     guid: 129dd593eb649436ea723fba05ff1b92
+  - enabled: 1
+    path: Assets/ServerSetup/Configure.unity
+    guid: a17c869d2115f41e8836137f95c03b62
+  - enabled: 1
+    path: Assets/ServerSetup/Server Setup.unity
+    guid: eac580ed9ece545b2ab785d8d9b3b059
   m_configObjects: {}
